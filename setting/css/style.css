@@ -1,0 +1,40 @@
+.jimu-widget-dynamicannotationbuilder-setting{
+  margin:0;
+  padding:0;
+  font-size:15px;
+}
+.jimu-widget-dynamicannotationbuilder-setting .dijitArrowButtonContainer{
+  width: 17px;
+}
+.jimu-widget-dynamicannotationbuilder-setting .dijitSelect{
+  height: 30px;
+  width: 100%;
+}
+
+.jimu-widget-dynamicannotationbuilder-setting .setting-table > thead > tr > th,
+.jimu-widget-dynamicannotationbuilder-setting .setting-table > tbody > tr > td{
+  height:34px;
+  line-height:34px;
+  vertical-align:middle;
+}
+
+.jimu-widget-dynamicannotationbuilder-setting .opers,.hideItems{
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.jimu-widget-dynamicannotationbuilder-setting .showItems:first-child{
+  margin-left: 0;
+}
+
+.jimu-widget-dynamicannotationbuilder-setting .showItems{
+  display: inline-block;
+  margin-left: 20px;
+}
+.jimu-widget-dynamicannotationbuilder-setting .showItems > span{
+  vertical-align: middle;
+}
+
+.jimu-widget-dynamicannotationbuilder-setting .subtilte{
+  padding-top: 10px;
+}
+

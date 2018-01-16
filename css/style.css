@@ -1,0 +1,22 @@
+.dabLightGray{
+	background:#ccc;
+	
+
+}
+.dabMediumGray{
+	background:#eee;
+	
+}
+#dabBtnAddToTree{margin-bottom: 10px;}
+.labelElementInTree {
+	cursor: pointer;
+    font-size: 12pt;
+    color: blue;
+ }
+.dabGen0{padding-left:0px;}
+.dabGen1{padding-left:10px;}
+.dabGen2{padding-left:20px;}
+.dabGen3{padding-left:30px;}
+.dabGen4{padding-left:40px;}
+.dabGen5{padding-left:50px;}
+

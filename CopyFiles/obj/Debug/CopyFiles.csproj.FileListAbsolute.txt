@@ -1,0 +1,17 @@
+D:\WAB\arcgis-web-appbuilder-2.6\WebAppBuilderForArcGIS\client\stemapp\widgets\DynamicAnnotationBuilder\CopyFiles\bin\Debug\CopyFiles.exe.config
+D:\WAB\arcgis-web-appbuilder-2.6\WebAppBuilderForArcGIS\client\stemapp\widgets\DynamicAnnotationBuilder\CopyFiles\bin\Debug\CopyFiles.exe
+D:\WAB\arcgis-web-appbuilder-2.6\WebAppBuilderForArcGIS\client\stemapp\widgets\DynamicAnnotationBuilder\CopyFiles\bin\Debug\CopyFiles.pdb
+D:\WAB\arcgis-web-appbuilder-2.6\WebAppBuilderForArcGIS\client\stemapp\widgets\DynamicAnnotationBuilder\CopyFiles\obj\Debug\CopyFiles.csprojResolveAssemblyReference.cache
+D:\WAB\arcgis-web-appbuilder-2.6\WebAppBuilderForArcGIS\client\stemapp\widgets\DynamicAnnotationBuilder\CopyFiles\obj\Debug\CopyFiles.Form1.resources
+D:\WAB\arcgis-web-appbuilder-2.6\WebAppBuilderForArcGIS\client\stemapp\widgets\DynamicAnnotationBuilder\CopyFiles\obj\Debug\CopyFiles.Properties.Resources.resources
+D:\WAB\arcgis-web-appbuilder-2.6\WebAppBuilderForArcGIS\client\stemapp\widgets\DynamicAnnotationBuilder\CopyFiles\obj\Debug\CopyFiles.csproj.GenerateResource.Cache
+D:\WAB\arcgis-web-appbuilder-2.6\WebAppBuilderForArcGIS\client\stemapp\widgets\DynamicAnnotationBuilder\CopyFiles\obj\Debug\CopyFiles.exe
+D:\WAB\arcgis-web-appbuilder-2.6\WebAppBuilderForArcGIS\client\stemapp\widgets\DynamicAnnotationBuilder\CopyFiles\obj\Debug\CopyFiles.pdb
+D:\Projects\DynamicAnnotationBuilder\CopyFiles\obj\Debug\CopyFiles.exe
+D:\Projects\DynamicAnnotationBuilder\CopyFiles\obj\Debug\CopyFiles.pdb
+D:\Projects\DynamicAnnotationBuilder\CopyFiles\bin\Debug\CopyFiles.exe
+D:\Projects\DynamicAnnotationBuilder\CopyFiles\bin\Debug\CopyFiles.pdb
+D:\Projects\DynamicAnnotationBuilder\CopyFiles\obj\Debug\CopyFiles.csprojResolveAssemblyReference.cache
+D:\Projects\DynamicAnnotationBuilder\CopyFiles\obj\Debug\CopyFiles.Form1.resources
+D:\Projects\DynamicAnnotationBuilder\CopyFiles\obj\Debug\CopyFiles.Properties.Resources.resources
+D:\Projects\DynamicAnnotationBuilder\CopyFiles\obj\Debug\CopyFiles.csproj.GenerateResource.Cache
