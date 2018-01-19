@@ -25,11 +25,11 @@ var x = define(['dojo/_base/declare', 'jimu/BaseWidget'],
               $('#tree').treeview({
                   data: getTree(),
                   onNodeSelected: function(event, data) {
-                      //alert(data);
-                  } 
+                      //alert("Load html");
+                  }
               });
 
-              $('#dabBtnAddToTree').click(function () {
+              /*$('#dabBtnAddToTree').click(function () {
                   debugger;
                   var parentNode = [$('#tree').treeview('getSelected')[0]];
                   var numberOfChildren = parentNode.length + 1;
@@ -38,8 +38,13 @@ var x = define(['dojo/_base/declare', 'jimu/BaseWidget'],
                   //debugger;
                   
               } 
-              );
-      
+              );*/
+
+              $('#tree').dblclick(function () {
+                  alert("Hello World!");
+              });
+
+
               $('.list-group li').click(function (e) {
                   e.preventDefault();
                   //dabLIClick();
@@ -126,35 +131,13 @@ var _labelItems = [{
 }];
 var tree = [
   {
-      text: "Parent 1",
+      text: "New Label Expression (select to set properties)",
       nodes: [
         {
-            text: "Child 1",
-            nodes: [
-              {
-                  text: "Grandchild 1"
-              },
-              {
-                  text: "Grandchild 2"
-              }
-            ]
-        },
-        {
-            text: "Child 2"
+            text: "Field/Text Labeler",
+            labeler: "Field/Text Labeler"
         }
       ]
-  },
-  {
-      text: "Parent 2"
-  },
-  {
-      text: "Parent 3"
-  },
-  {
-      text: "Parent 4"
-  },
-  {
-      text: "Parent 5"
   }
 ];
 function getTree() {
