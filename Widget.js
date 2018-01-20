@@ -24,8 +24,10 @@ var x = define(['dojo/_base/declare', 'jimu/BaseWidget'],
               // _treeview = $('#tree').treeview;
               $('#tree').treeview({
                   data: getTree(),
-                  onNodeSelected: function(event, data) {
-                      //alert("Load html");
+                  onNodeSelected: function (event, data) {
+                      $.get(_labelItems[0].File, function (data) {
+                          //  
+                      });
                   }
               });
 
@@ -132,10 +134,21 @@ var _labelItems = [{
 var tree = [
   {
       text: "New Label Expression (select to set properties)",
+      labeler:"DABTopLevelLabeler",
       nodes: [
         {
             text: "Field/Text Labeler",
-            labeler: "Field/Text Labeler"
+            labeler: "FieldTextLabeler",
+            commonProperties:{
+                minScale: -1,
+                maxScale: -1,
+                color: '#000000',
+                font: 'Arial',
+                size: '12px'
+            },
+            proerties: {
+                expression: "Hello ObjectID [OBJECTID]"
+            }
         }
       ]
   }

@@ -3,8 +3,13 @@
 	
 
 }
+.jimu-widget-DynamicAnnotationBuilder .grad {
+    background: linear-gradient(to right, #003366, #336699 50%, #003366);
+    color: white;
+    padding-left: 5px;
+}
 .dabMediumGray{
-	background:#eee;
+	background:#FFF;
 	
 }
 #dabBtnAddToTree{margin-bottom: 10px;}

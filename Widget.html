@@ -1,76 +1,81 @@
-  <div>
-  	<h5>Modified at</h5>
-      <div class=" ">
-          <h5>Select a Label Expression or Create a New One.</h5>
-          <div class="">
-              <div class="row" style="margin-top:5px">
-                  <div class="col-sm-8">
-                      <select class="form-control">
-                          <option value="New Label Expression">new</option>
-                          <option value="Existing Expression #1">Existing Expression #1</option>
-                          <option value="Existing Expression #2">Existing Expression #2</option>
-                      </select>
-                  </div>
-                  <div class="">
-                      <button type="button" class="btn btn-info btn-sm">Save</button>
-                  </div>
-          </div>
-          <!--
-          <div class="container  dabLightGray">
-              <h4>Label Elements</h4>
-              <ul class="list-group">
-                  <li class="list-group-item active">Field / Text</li>
-                  <li class="list-group-item">Relationship</li>
-                  <li class="list-group-item">External</li>
-                  <li class="list-group-item">Spatial</li>
-                  <li class="list-group-item">Filter</li>
-                  <li class="list-group-item">Group</li>
-              </ul>
-              <div>
-                  <h5>Description:</h5>
-                  <div id="divDescription"></div>
-              </div>
-          </div>
-              -->
-          <div class=" " >
-              <h4>Label Expression</h4>
-              <div class="row" style="margin-top:5px">
-                <!--<div class="col-sm-4"></div>-->
-                <div class="col-sm-12">
-                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">+</button>
-                    <button type="button" class="btn btn-info btn-sm">X</button>
+<div>
+    <h5>Modified at</h5>
+    <div class=" ">
+        <h5 class="grad">SELECT OR CREATE EXPRESSION</h5>
+        <div class="">
+            <div class="row" style="margin-top:5px">
+                <div class="col-sm-8">
+                    <select class="form-control">
+                        <option value="New Label Expression">New Expression</option>
+                        <option value="Existing Expression #1">Existing Expression #1</option>
+                        <option value="Existing Expression #2">Existing Expression #2</option>
+                    </select>
                 </div>
-              </div>
-              <div id="tree"></div>
-              <!--
-            <table class='dabExpressionTable'>
-                <tr>
-                <td class="dabGen0 labelElementInTree">Grandparent</td>
-                </tr>
-                <tr>
-                <td class="dabGen1 labelElementInTree">Parent 1</td>
-                </tr>
-                <tr>
-                <td class="dabGen2 labelElementInTree">Child 1</td>
-                <tr>
-                <tr>
-                <td class="dabGen2 labelElementInTree">Child 2</td>
-                <tr>
-                <td class="dabGen3 labelElementInTree">Grandchild</td>
-                </tr>
-                <tr>
-                <td class="dabGen1 labelElementInTree">Parent 2</td>
-                </tr>
-            </table>-->
+                <div class="">
+                    <button type="button" class="btn btn-info btn-sm">Save...</button>
+                </div>
+            </div>
+            <div class="row" style="margin-top:5px">
+                <div class="col-sm-8">
+                    <label class="radio-inline"><input type="radio" name="optradio">Labels</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">Anno</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">Off</label>
+                </div>
+            </div>
 
-          </div>
-          <div class=" ">
-              <div class="   dabMediumGray">
-                  <h4>Properties</h4>
-                  <div id="divLabelElementProperties"></div>
-              </div>
-          </div>
+            <div>
+                <h4 class="grad">LABEL EXPRESSION</h4>
+                <div class="row" style="margin-top:5px">
+                    <!--<div class="col-sm-4"></div>-->
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">+</button>
+                        <button type="button" class="btn btn-info btn-sm">X</button>
+                    </div>
+                </div>
+                <div id="tree"></div>
 
-      </div>
+            </div>
+            <div class=" ">
+                <div class=" dabMediumGray">
+                    <h4 class="grad">PROPERTIES</h4>
+                    <div id="divLabelElementProperties">
 
-  	</div>  
+                        <div id="accordion">
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Common Properties
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div id="divDabCommonProperties" class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Label Element Specific Properties
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div id="divDabCommonProperties" class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
