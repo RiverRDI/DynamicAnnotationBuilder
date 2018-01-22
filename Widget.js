@@ -1,7 +1,9 @@
 var x = define(['dojo/_base/declare', 'jimu/BaseWidget'],
-  function(declare, BaseWidget) {
+  function (declare, BaseWidget) {
       //To create a widget, you need to derive from BaseWidget.
       var _treeview;
+      var _activeNodeId = "0.0";
+      var counter = 0;
       return declare([BaseWidget], {
           // Custom widget code goes here
 
@@ -15,7 +17,8 @@ var x = define(['dojo/_base/declare', 'jimu/BaseWidget'],
           //   console.log('postCreate');
           // },
 
-          startup: function() {
+          startup: function () {
+              //fieldTextLabeler().InititializeMe();
               this.inherited(arguments);
               //this.mapIdNode.innerHTML = 'map id:' + this.map.id;
               //alert("T");
@@ -25,10 +28,17 @@ var x = define(['dojo/_base/declare', 'jimu/BaseWidget'],
               $('#tree').treeview({
                   data: getTree(),
                   onNodeSelected: function (event, data) {
-                      $.get(_labelItems[0].File, function (data) {
-                          //  
-                      });
+                      _activeNodeId = data.nodeId;
+                      var activeGuid = "asdf";
+                  },
+                  onDoubleClick: function (event, data) {
+                      OnTreeDoubleClick();
                   }
+                  //,
+                  //onNodeRendered: function (event, data) {
+                  //    counter++;
+                  //    console.log(counter + " : " + data);
+                  //}
               });
 
               /*$('#dabBtnAddToTree').click(function () {
@@ -37,142 +47,142 @@ var x = define(['dojo/_base/declare', 'jimu/BaseWidget'],
                   var numberOfChildren = parentNode.length + 1;
                   var newNode = [{ text: 'New Node' }];
                   $('#tree').treeview('addNode', [newNode, parentNode, numberOfChildren]);
+
                   //debugger;
                   
               } 
               );*/
 
-              $('#tree').dblclick(function () {
-                  alert("Hello World!");
+              $('#btnDabUpdateLabelElement').click (function(event,data){
+                  var selectedNode = $('#tree').treeview('getSelected')[0];
               });
 
-
-              $('.list-group li').click(function (e) {
-                  e.preventDefault();
-                  //dabLIClick();
-                  $that = $(this);
-
-                  $that.parent().find('li').removeClass('active');
-                  $that.addClass('active');
-                  var selectedLabelerName = ($that.text());
-                  for (var i = 0; i < _labelItems.length; i++) {
-                      if (_labelItems[i].DisplayName === selectedLabelerName) {
-                          $('#divDescription').html(_labelItems[i].Description);
-                          //$.get(_labelItems[i].File, function(data) {
-                          //  
-                          //});
-                      }
-                  }
+              $('#tree').dblclick(function () {
+                  //OnTreeDoubleClick();
               });
 
           }
 
 
-        // onOpen: function(){
-        //   console.log('onOpen');
-        // },
+          // onOpen: function(){
+          //   console.log('onOpen');
+          // },
 
-        // onClose: function(){
-        //   console.log('onClose');
-        // },
+          // onClose: function(){
+          //   console.log('onClose');
+          // },
 
-        // onMinimize: function(){
-        //   console.log('onMinimize');
-        // },
+          // onMinimize: function(){
+          //   console.log('onMinimize');
+          // },
 
-        // onMaximize: function(){
-        //   console.log('onMaximize');
-        // },
+          // onMaximize: function(){
+          //   console.log('onMaximize');
+          // },
 
-        // onSignIn: function(credential){
-        //   /* jshint unused:false*/
-        //   console.log('onSignIn');
-        // },
+          // onSignIn: function(credential){
+          //   /* jshint unused:false*/
+          //   console.log('onSignIn');
+          // },
 
-        // onSignOut: function(){
-        //   console.log('onSignOut');
-        // }
+          // onSignOut: function(){
+          //   console.log('onSignOut');
+          // }
 
-        // onPositionChange: function(){
-        //   console.log('onPositionChange');
-        // },
+          // onPositionChange: function(){
+          //   console.log('onPositionChange');
+          // },
 
-        // resize: function(){
-        //   console.log('resize');
-        // }
+          // resize: function(){
+          //   console.log('resize');
+          // }
 
-        //methods to communication between widgets:
+          //methods to communication between widgets:
 
-          })
+      })
   });
-  
+
 var _labelItems = [{
     DisplayName: 'Field / Text',
     File: "FieldTextLabeler.html",
-    Description:"Description for Field Text Labeler"
+    Description: "Description for Field Text Labeler"
 }, {
     DisplayName: 'Relationship',
     File: "RelationshipLabeler.html",
-    Description:"Description for Relationship Labeler"
+    Description: "Description for Relationship Labeler"
 }, {
     DisplayName: 'External',
     File: "ExternalLabeler.html",
-    Description:"Description for External Labeler"
+    Description: "Description for External Labeler"
 }, {
     DisplayName: 'Spatial',
     File: "SpatialLabeler.html",
-    Description:"Description for Spatial Labeler"
+    Description: "Description for Spatial Labeler"
 }, {
     DisplayName: 'Filter',
     File: "FilterLabeler.html",
-    Description:"Description for Filter Labeler"
+    Description: "Description for Filter Labeler"
 }, {
     DisplayName: 'Group',
     File: "GroupLabeler.html",
-    Description:"Description for Group Labeler"
+    Description: "Description for Group Labeler"
 }];
 var tree = [
   {
       text: "New Label Expression (select to set properties)",
-      labeler:"DABTopLevelLabeler",
+      labeler: "DABTopLevelLabeler",
+      Guid:getGuid(),
       nodes: [
-        {
-            text: "Field/Text Labeler",
-            labeler: "FieldTextLabeler",
-            commonProperties:{
-                minScale: -1,
-                maxScale: -1,
-                color: '#000000',
-                font: 'Arial',
-                size: '12px'
-            },
-            proerties: {
-                expression: "Hello ObjectID [OBJECTID]"
-            }
-        }
       ]
   }
 ];
+var _selectedLabelItem = "FieldTextLabeler";
 function getTree() {
 
     return tree;
-}  
-function dabLIClick(e) {
-
-      //e.preventDefault();
-  
-      $that = $(this);
-  
-      $that.parent().find('li').removeClass('active');
-      $that.addClass('active');
-      var selectedLabelerName = ($that.text());
-      for (var i = 0; i < _labelItems.length; i++) {
-        if (_labelItems[i].DisplayName === selectedLabelerName) {
-        $('#divDescription').html(_labelItems[i].Description);
-        //$.get(_labelItems[i].File, function(data) {
-        //  
-        //});
-        }
-      }
 }
-  
+function btnDabUpdateLabelElement() {
+    var selectedNode = $('#tree').treeview('getSelected')[0];
+}
+var _labelElementsInExpression = [];
+function dabAddLabelElement() {
+    $.get("Widgets/DynamicAnnotationBuilder/" + _selectedLabelItem + ".html", function (data) {
+        var parentNode = $('#tree').treeview('getSelected')[0];
+        var numberOfChildren = parentNode.length + 1;
+        var newLabeler = "";
+        var guid = getGuid();
+        var parentGuid = parentNode.Guid;
+        var newNode = { text: "Default Text", Guid: guid , parentGuid: parentGuid};
+        if (_selectedLabelItem === "FieldTextLabeler") {
+            newLabeler = new FieldTextLabeler(guid,parentGuid);
+            newNode.text = newLabeler.Properties.DisplayText;
+        }
+        $('#tree').treeview('addNode', [newNode , [parentNode], numberOfChildren]);
+        _labelElementsInExpression.push(newLabeler);
+        $('#divDabLabelElementSpecificProperties').html(data);
+    });
+}
+
+function getGuid() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+
+$('#listGroupDabLabelElements li').click(function (e) {
+    e.preventDefault();
+    //dabLIClick();
+    $that = $(this);
+    _selectedLabelItem = dojo.attr(this, 'labeler');
+    $that.parent().find('li').removeClass('active');
+    $that.addClass('active');
+    var selectedLabelerName = ($that.text());
+    for (var i = 0; i < _labelItems.length; i++) {
+        if (_labelItems[i].DisplayName === selectedLabelerName) {
+            $('#divDescription').html(_labelItems[i].Description);
+        }
+    }
+});
+
+

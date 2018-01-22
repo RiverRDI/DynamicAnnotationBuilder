@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyFiles", "..\CopyFilesForDAB\CopyFiles\CopyFiles.csproj", "{6682528F-9ABD-4AB1-8F51-E3CA0A78D033}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{237E7ADA-BA28-4E02-B4B2-3F9FE2A84337}"
+	ProjectSection(SolutionItems) = preProject
+		bootstrap.min.js = bootstrap.min.js
+		CommonLabeler.html = CommonLabeler.html
+		CommonLabeler.js = CommonLabeler.js
+		config.json = config.json
+		DABTopLevelLabeler.html = DABTopLevelLabeler.html
+		FieldTextLabeler.html = FieldTextLabeler.html
+		FieldTextLabeler.js = FieldTextLabeler.js
+		index.html = index.html
+		jquery.min.js = jquery.min.js
+		manifest.json = manifest.json
+		RelationshipLabeler.html = RelationshipLabeler.html
+		RelationshipLabeler.js = RelationshipLabeler.js
+		css\style.css = css\style.css
+		VersionManager.js = VersionManager.js
+		Widget.html = Widget.html
+		Widget.js = Widget.js
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Bootstrap-Treeview", "Bootstrap-Treeview\", "{0D92AC5A-3F2E-49DC-BEB4-F6CC6CCB6711}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62316"
+		Debug.AspNetCompiler.PhysicalPath = "Bootstrap-Treeview\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62316\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62316"
+		Release.AspNetCompiler.PhysicalPath = "Bootstrap-Treeview\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62316\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62316"
+		SlnRelativePath = "Bootstrap-Treeview\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6682528F-9ABD-4AB1-8F51-E3CA0A78D033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6682528F-9ABD-4AB1-8F51-E3CA0A78D033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6682528F-9ABD-4AB1-8F51-E3CA0A78D033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6682528F-9ABD-4AB1-8F51-E3CA0A78D033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D92AC5A-3F2E-49DC-BEB4-F6CC6CCB6711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D92AC5A-3F2E-49DC-BEB4-F6CC6CCB6711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D92AC5A-3F2E-49DC-BEB4-F6CC6CCB6711}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D92AC5A-3F2E-49DC-BEB4-F6CC6CCB6711}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D92AC5A-3F2E-49DC-BEB4-F6CC6CCB6711} = {237E7ADA-BA28-4E02-B4B2-3F9FE2A84337}
+	EndGlobalSection
+EndGlobal
