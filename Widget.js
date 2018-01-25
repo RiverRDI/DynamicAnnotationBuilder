@@ -131,6 +131,9 @@ var tree = [
   {
       text: "New Label Expression (select to set properties)",
       labeler: "DABTopLevelLabeler",
+      state:{
+          selected:true
+      },
       Guid:getGuid(),
       nodes: [
       ]
@@ -146,21 +149,46 @@ function btnDabUpdateLabelElement() {
 }
 var _labelElementsInExpression = [];
 function dabAddLabelElement() {
-    $.get("Widgets/DynamicAnnotationBuilder/" + _selectedLabelItem + ".html", function (data) {
+    //$.get("Widgets/DynamicAnnotationBuilder/" + _selectedLabelItem + ".html", function (data) {
+        
         var parentNode = $('#tree').treeview('getSelected')[0];
         var numberOfChildren = parentNode.length + 1;
         var newLabeler = "";
         var guid = getGuid();
+        //data = data.replace("***REPLACE WITH GUID***", guid);
         var parentGuid = parentNode.Guid;
         var newNode = { text: "Default Text", Guid: guid , parentGuid: parentGuid};
         if (_selectedLabelItem === "FieldTextLabeler") {
             newLabeler = new FieldTextLabeler(guid,parentGuid);
-            newNode.text = newLabeler.Properties.DisplayText;
         }
+        if (_selectedLabelItem === "RelationshipLabeler") {
+            newLabeler = new RelationshipLabeler(guid, parentGuid);
+        }
+        //...
+        newNode.text = newLabeler.Properties.DisplayText;
+        newNode.Labeler = newLabeler;
         $('#tree').treeview('addNode', [newNode , [parentNode], numberOfChildren]);
-        _labelElementsInExpression.push(newLabeler);
-        $('#divDabLabelElementSpecificProperties').html(data);
+        HydrateLabelElement(newLabeler)
+
+        //_labelElementsInExpression.push(newLabeler);
+        //$('#divDabLabelElementSpecificProperties').html(data);
+        //$.get("Widgets/DynamicAnnotationBuilder/CommonLabeler.html", function (commonLabelerData) {
+        //    $('#divDabCommonProperties').html(commonLabelerData);
+        //    newLabeler.Initialize();
+        //});
+    //});
+}
+
+function HydrateLabelElement(newLabeler) {
+    var html = "";
+    require(["dojo/_base/array"],
+    function (array) {
+        array.forEach(newLabeler.CommonProperties, function (item, i) {
+            html += item;
+            //domConst.create("TR", { innerHTML: "<TD>" +  i + 1 + ". " + item }, "divDabLabelElementProperties");
+        });
     });
+
 }
 
 function getGuid() {
